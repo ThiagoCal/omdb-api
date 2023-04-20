@@ -7,7 +7,7 @@ export const getQuery = (data) => (dispatch) => {
 
 export const fetchMovies = (movie) => (dispatch, getState) => {
   fetch(
-    `http://www.omdbapi.com/?s=${movie}&apikey=${process.env.REACT_APP_APIKEY}`
+    `https://www.omdbapi.com/?s=${movie}&apikey=${process.env.REACT_APP_APIKEY}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -21,7 +21,7 @@ export const fetchMovies = (movie) => (dispatch, getState) => {
 export const fetchMovie = (id) => (dispatch, getState) => {
   console.log("id fetch", id);
   fetch(
-    `http://www.omdbapi.com/?&i=${id}&apikey=${process.env.REACT_APP_APIKEY}`
+    `https://www.omdbapi.com/?&i=${id}&apikey=${process.env.REACT_APP_APIKEY}`
   )
     .then((res) => res.json())
     .then((data) => {
